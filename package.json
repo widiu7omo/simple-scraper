@@ -1,0 +1,18 @@
+{
+  "name": "simple-scrapper",
+  "version": "1.0.0",
+  "description": "Scraping dom html with cheerio",
+  "main": "index.js",
+  "author": "Danar Widi <widiu7omo@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cheerio": "^1.0.0-rc.3",
+    "express": "^4.16.4",
+    "mysql2": "^1.6.5",
+    "objects-to-csv": "^1.2.1",
+    "request": "^2.88.0",
+    "request-promise": "^4.2.4",
+    "sequelize": "^5.8.5"
+  }
+}
