@@ -2,7 +2,7 @@
   "name": "simple-scrapper",
   "version": "1.0.0",
   "description": "Scraping dom html with cheerio",
-  "main": "index.js",
+  "main": "server.js",
   "author": "Danar Widi <widiu7omo@gmail.com>",
   "license": "MIT",
   "dependencies": {
