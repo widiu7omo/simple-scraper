@@ -12,10 +12,10 @@ app.use(bodyParser.urlencoded({extended: true}));
 const Sequelize = require('sequelize');
 
 const sequelize = new Sequelize({
-    host: 'localhost',
-    username: 'root',
-    password: '',
-    database: 'news-scraping',
+    host: 'db4free.net',
+    username: 'scraper',
+    password: 'scrapertest',
+    database: 'simple_scraper',
     dialect: 'mysql'
 });
 
