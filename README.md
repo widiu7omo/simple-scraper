@@ -12,7 +12,7 @@
     
     goto localhost:8081 
     or 
-    *.herokuapp.com
+    simple-scraper-news.herokuapp.com
     / root homepage (GET)
     /scraping (view scraped data from url already defined) (GET)
     /scraping (fetching data from url and save to database) (POST)
