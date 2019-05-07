@@ -10,6 +10,7 @@
     
 *How to use*
     
+    type `node server.js` trough terminal / cmd
     goto localhost:8081 
     or 
     simple-scraper-news.herokuapp.com
