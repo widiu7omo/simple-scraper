@@ -1,3 +1,4 @@
+//not currently in use
 const htmlStructures = [
     {
         "name": "tribun-banjarmasin",
@@ -13,7 +14,7 @@ const htmlStructures = [
         "component":['title','image','news'],
         'category': 'kriminal'
     }
-]
+];
 export {
     htmlStructures
 }
