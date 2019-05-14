@@ -25,6 +25,7 @@
 *Screenshot*
 ![Screenshoot](assets/ss.png)
   #####TODO:
+  - [ ] add Radar Banjarmasin
   - [ ] add post param (dynamic scarping)
   - [ ] add UI (make better UX)
   - [ ] add pagination for fetching more than one page
