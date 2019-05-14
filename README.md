@@ -24,11 +24,17 @@
 > use postman or insomnia to access /scraping with POST method
 
 *Screenshot*
+> fetching with dataType JSON
 ![Screenshoot](assets/ss.png)
+
+> fetching from web
+![Screenshoot](assets/ss1.png)
   #####TODO:
-  - [ ] add Radar Banjarmasin
-  - [ ] add post param (dynamic scarping)
-  - [ ] add UI (make better UX)
+  - [x] add Radar Banjarmasin
+  - [x] add post param (dynamic scarping)
+  - [x] add UI (make better UX)
   - [ ] add pagination for fetching more than one page
-  - [ ] cleaning the code, (index.js), still looking for param 
+  - [x] cleaning the code, (index.js), still looking for param 
   - [ ] add custom config for database     
+  - [ ] add loading animation while fetching data
+  - [ ] fix error connect to db4free.net
