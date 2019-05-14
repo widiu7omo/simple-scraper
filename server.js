@@ -1,13 +1,17 @@
 const express = require('express');
+// const reload = require('express-reload');
 const bodyParser = require('body-parser');
 const port = process.env.PORT || 8081;
 const getScrapingNews = require("./index");
+const newsData = require("./newsHtmlStructure");
+
 // initialize express as app
 const app = express();
 //add body parser
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
-
+//set template engine
+app.set('view engine', 'pug');
 //initialize sequelize (database bridge)
 const Sequelize = require('sequelize');
 //config database
@@ -50,7 +54,24 @@ const getAllNews = async () => {
 //getAll news
 //access from root 'localhost:env.port||8081'
 app.get('/', (req, res) => {
-    res.json({message: 'express are running'});
+    res.render('index', {newsData:newsData});
+});
+app.post('/',(req,res)=>{
+    let formData = req.body;
+    //check, input sumber is exist or not
+    if (typeof formData.sumber !== "undefined"){
+        getScrapingNews(formData.sumber).then((results)=>{
+            //limit string to 100 and add "..."
+            var filteredResult = results.map(result=>{
+                result.titleArticle = result.titleArticle.substr(0,35);
+                result.titleArticle = result.titleArticle + "...";
+                result.newsContent = result.newsContent.substr(0,100);
+                result.newsContent = result.newsContent + "...";
+                return result
+            });
+            return res.render('index',{newsData:newsData,results:filteredResult})
+        })
+    }
 });
 
 //route method GET /news , to display news data array to JSON format
@@ -68,27 +89,34 @@ app.post('/scraping', (req, res) => {
     //@TODO:add UI (make better UX)
     //@TODO:add pagination for fetching more than one page
     //@TODO:cleaning the code, (index.js), still looking for param
-    getScrapingNews().then((result) =>
-        {
-            result.map(news=>{
-               createNews({
-                   link:news.link,
-                   title:news.titleArticle,
-                   image:news.innerImage,
-                   content:news.newsContent
-               })
-            });
-            res.json({message:'Scrapping successfully, saved to the database'})
-        })
+    getScrapingNews().then((result) => {
+        result.map(news => {
+            createNews({
+                link: news.link,
+                title: news.titleArticle,
+                image: news.innerImage,
+                content: news.newsContent
+            })
+        });
+        res.json({message: 'Scrapping successfully, saved to the database'})
+    })
+});
+
+app.post('/fetch', (req, res) => {
+    let formData = req.body;
+    res.json({sumber: formData.sumber})
+
 });
 
 //route method GET /scraping , to display scraped news w/out saving to database
 app.get('/scraping', (req, res) => {
-    getScrapingNews().then((result) =>
-    {
+    getScrapingNews().then((result) => {
         res.json(result)
     })
 });
+// var path = __dirname + '/server.js';
+//add express reload
+// app.use(reload(path));
 //start server from localhost with port server or 8081
 app.listen(port, () => {
     console.log(`server running at ${port}`)

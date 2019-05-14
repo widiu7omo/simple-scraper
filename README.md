@@ -13,6 +13,7 @@
     type `node server.js` trough terminal / cmd
     goto localhost:8081 
     or 
+    #DEMO
     simple-scraper-news.herokuapp.com
     / root homepage (GET)
     /scraping (view scraped data from url already defined) (GET)
