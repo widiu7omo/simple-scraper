@@ -12,7 +12,7 @@ const htmlStructures = [
         "page_param":"?&page=",
         "interval":1,
         "from":1,
-        "to":5
+        "to":3
     },
     {
         "name":"kalsel-antara-news",
@@ -26,7 +26,7 @@ const htmlStructures = [
         "page_param":"/",
         "interval":1,
         "from":1,
-        "to":5
+        "to":3
     },
     {
         "name":"randar-banjarmasin",
@@ -40,7 +40,7 @@ const htmlStructures = [
         "page_param":"/",
         "interval":11,
         "from":11,
-        "to":44
+        "to":33
 
     }
 ];
