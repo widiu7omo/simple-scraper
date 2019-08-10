@@ -23,10 +23,11 @@ const getScrapingNews = async (kindNews) => {
        }
     });
     
-    console.log(pages);
+    // console.log(pages);
     for(let i = 0;i<pages.length;i++){
         let url = dataSelector.baseurl+dataSelector.page_param+pages[i];
         console.log(url);
+
         const html = await rp(url);
             //handling error when fetch news from those site
             try{

@@ -12,7 +12,7 @@ const htmlStructures = [
         "page_param":"?&page=",
         "interval":1,
         "from":1,
-        "to":5,
+        "to":1,
         "status":true
     },
     {
@@ -42,7 +42,7 @@ const htmlStructures = [
         "page_param":"/",
         "interval":11,
         "from":11,
-        "to":44,
+        "to":11,
         "status":true
     }
 ];

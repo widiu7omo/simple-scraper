@@ -123,20 +123,19 @@ function mergeNews(news){
 //route method GET /scraping , to display scraped news w/out saving to database
 app.get('/scraping', async (req, res) => {
     let mergedResults = [];
+    let concatResults = [];
     //check, input sumber is exist or not
     for(let i = 0;i<newsData.length;i++){
         if(newsData[i].status){
+            console.log(newsData[i].name);
             let results = await getScrapingNews(newsData[i].name);
-            mergedResults = mergeNews(results);
-            mergedResults = mergedResults.concat(mergedResults);
+            mergedResults = await mergeNews(results);
+            concatResults.push(mergedResults);
         }
     }
-    await res.json(mergedResults);
-
+    let finalResults = await mergeNews(concatResults);
+    await res.json(finalResults);
 });
-// var path = __dirname + '/server.js';
-//add express reload
-// app.use(reload(path));
 //start server from localhost with port server or 8081
 app.listen(port, () => {
     console.log(`server running at ${port}`)
