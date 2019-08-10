@@ -125,9 +125,11 @@ app.get('/scraping', async (req, res) => {
     let mergedResults = [];
     //check, input sumber is exist or not
     for(let i = 0;i<newsData.length;i++){
-        let results = await getScrapingNews(newsData[i].name);
-        mergedResults = mergeNews(results);
-        mergedResults = mergedResults.concat(mergedResults);
+        if(newsData[1].status){
+            let results = await getScrapingNews(newsData[i].name);
+            mergedResults = mergeNews(results);
+            mergedResults = mergedResults.concat(mergedResults);
+        }
     }
     await res.json(mergedResults);
 

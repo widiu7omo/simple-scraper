@@ -2,7 +2,7 @@
 const htmlStructures = [
     {
         "name":"tribun-banjarmasin",
-        "baseurl":"http://banjarmasin.tribunnews.com/topic/kriminalitas-banjarmasin",
+        "baseurl":"https://banjarmasin.tribunnews.com/topic/kriminalitas-banjarmasin",
         "dom":"li.p2030 > div >h3.f20.ln24.fbo>a",
         "domtitle":"h1#arttitle",
         "domimg":"div#artimg>div.pb20.ovh>div.ovh.imgfull_div>img",
@@ -12,7 +12,8 @@ const htmlStructures = [
         "page_param":"?&page=",
         "interval":1,
         "from":1,
-        "to":3
+        "to":5,
+        "status":true
     },
     {
         "name":"kalsel-antara-news",
@@ -26,11 +27,12 @@ const htmlStructures = [
         "page_param":"/",
         "interval":1,
         "from":1,
-        "to":3
+        "to":5,
+        "status":true
     },
     {
         "name":"randar-banjarmasin",
-        "baseurl":"http://kalsel.prokal.co/rubrik/index/2-hukum-peristiwa",
+        "baseurl":"https://kalsel.prokal.co/rubrik/index/2-hukum-peristiwa",
         "dom":'div.media>div.media-body>a',
         "domtitle":'div[style="padding:10px 20px 10px 20px;"]>div[style="font-family: utopiareg;margin: 5px 0 15px 0;font-size:40px;line-height:1"]',
         "domimg":'div[style="padding:10px 20px 10px 20px;"]>img',
@@ -40,8 +42,8 @@ const htmlStructures = [
         "page_param":"/",
         "interval":11,
         "from":11,
-        "to":33
-
+        "to":44,
+        "status":true
     }
 ];
 
