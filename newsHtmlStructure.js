@@ -12,7 +12,7 @@ const htmlStructures = [
         "page_param":"?&page=",
         "interval":1,
         "from":1,
-        "to":1,
+        "to":2,
         "status":true
     },
     {
@@ -27,8 +27,8 @@ const htmlStructures = [
         "page_param":"/",
         "interval":1,
         "from":1,
-        "to":5,
-        "status":false
+        "to":2,
+        "status":true
     },
     {
         "name":"randar-banjarmasin",
@@ -42,7 +42,7 @@ const htmlStructures = [
         "page_param":"/",
         "interval":11,
         "from":11,
-        "to":11,
+        "to":22,
         "status":true
     }
 ];
