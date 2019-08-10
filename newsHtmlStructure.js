@@ -28,7 +28,7 @@ const htmlStructures = [
         "interval":1,
         "from":1,
         "to":1,
-        "status":false
+        "status":true
     },
     {
         "name":"randar-banjarmasin",
@@ -43,7 +43,7 @@ const htmlStructures = [
         "interval":11,
         "from":11,
         "to":11,
-        "status":true
+        "status":false
     }
 ];
 
