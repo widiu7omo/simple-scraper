@@ -43,7 +43,7 @@ const htmlStructures = [
         "interval":11,
         "from":11,
         "to":44,
-        "status":true
+        "status":false
     }
 ];
 
