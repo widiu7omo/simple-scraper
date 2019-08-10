@@ -30,6 +30,7 @@
 > fetching from web
 ![Screenshoot](assets/ss1.png)
   #####TODO:
+  - [ ] Implement Background Queue. (Sparate process to some pieces to avoid H12 error code from heroku server)
   - [x] add Radar Banjarmasin
   - [x] add post param (dynamic scarping)
   - [x] add UI (make better UX)
