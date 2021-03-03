@@ -12,7 +12,7 @@
     "express-reload": "^1.2.0",
     "mysql2": "^1.6.5",
     "objects-to-csv": "^1.2.1",
-    "pug": "^2.0.3",
+    "pug": "^3.0.1",
     "request": "^2.88.0",
     "request-promise": "^4.2.4",
     "sequelize": "^5.8.5"
